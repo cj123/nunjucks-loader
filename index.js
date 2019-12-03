@@ -18,7 +18,7 @@ var jinjaCompatStr;
 var root;
 
 module.exports = function (source) {
-    if (this.target !== 'web') {
+    if (this.target !== 'web' && this.target !== 'webworker') {
         throw new Error('[nunjucks-loader] non-web targets are not supported');
     }
 
